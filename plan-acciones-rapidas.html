@@ -29,17 +29,16 @@
         .info-card p { color: #495057; font-size: 0.95em; word-break: break-all; }
         .info-card a { color: #00a8cc; text-decoration: none; }
         .info-card a:hover { text-decoration: underline; }
-        .social-strategy { background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 20px; border-radius: 8px; border: 1px solid #dee2e6; }
-        .social-strategy p { color: #495057; }
-        .social-strategy strong { color: #1a1a2e; }
-        .priorities { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+        .priorities { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
         .priority-item { background: #f8f9fa; padding: 25px 15px; border-radius: 10px; text-align: center; border: 2px solid #e9ecef; transition: all 0.3s ease; }
         .priority-item:hover { border-color: #00d9ff; transform: translateY(-2px); }
         .priority-num { font-size: 2em; color: #00d9ff; font-weight: 700; }
         .priority-text { color: #495057; font-size: 0.9em; margin-top: 8px; }
-        .notes { background: #fff9e6; padding: 20px; border-radius: 8px; border-left: 4px solid #ffc107; margin-top: 20px; }
-        .notes p { color: #665c00; font-size: 0.95em; font-style: italic; }
-        .notes strong { color: #856404; }
+        .notes { background: #e8f5e9; padding: 20px; border-radius: 8px; border-left: 4px solid #4caf50; margin-top: 20px; }
+        .notes p { color: #2e7d32; font-size: 0.95em; }
+        .notes strong { color: #1b5e20; }
+        .criterio { background: #fff9e6; padding: 20px; border-radius: 8px; border-left: 4px solid #ffc107; margin-top: 20px; }
+        .criterio p { color: #665c00; font-size: 0.95em; font-style: italic; }
         @media (max-width: 600px) { 
             .priorities { grid-template-columns: 1fr; } 
             .header h1 { font-size: 1.6em; }
@@ -51,19 +50,12 @@
     <div class="container">
         <div class="header">
             <div class="logo">MÁS QUE DEPORTE</div>
-            <h1>Plan de Acciones Rápidas</h1>
+            <h1>Plan de Acciones</h1>
             <p class="subtitle">Producción Podcast</p>
         </div>
 
         <div class="section">
-            <h2>📅 Fechas Clave</h2>
-            <div class="item">
-                <input type="checkbox" class="item-checkbox">
-                <div class="item-content">
-                    <div class="item-title">Sesión de fotos estilo portafolio para Taty y Matías<span class="status status-pending">pendiente</span></div>
-                    <div class="item-date">Fechas: 4-7 mayo 2026 (o antes)</div>
-                </div>
-            </div>
+            <h2>🎬 Producción</h2>
             <div class="item">
                 <input type="checkbox" class="item-checkbox">
                 <div class="item-content">
@@ -74,12 +66,11 @@
         </div>
 
         <div class="section">
-            <h2>🌐 Infraestructura Digital</h2>
+            <h2>🌐 Para la Marca</h2>
             <div class="info-grid">
                 <div class="info-card">
                     <h3>Dominio Web</h3>
                     <p><a href="https://mqdeporte.tv">mqdeporte.tv</a></p>
-                    <p style="color:#999;font-size:0.85em;margin-top:5px;">20€/año</p>
                 </div>
                 <div class="info-card">
                     <h3>Email</h3>
@@ -93,88 +84,51 @@
                     <h3>RRSS</h3>
                     <p>@mqdeporte.tv</p>
                 </div>
+                <div class="info-card">
+                    <h3>Logotipo</h3>
+                    <p><span class="status status-pending">pendiente</span></p>
+                </div>
+                <div class="info-card">
+                    <h3>Cuentas RRSS</h3>
+                    <p>YouTube + Instagram</p>
+                </div>
+            </div>
+            <div class="item" style="margin-top: 20px;">
+                <input type="checkbox" class="item-checkbox">
+                <div class="item-content">
+                    <div class="item-title">Sesión de fotos estilo portafolio - Taty y Matías</div>
+                    <div class="item-date">Fechas: 4-7 mayo 2026</div>
+                </div>
             </div>
         </div>
 
         <div class="section">
-            <h2>📱 Estrategia de Socialización</h2>
-            <div class="social-strategy">
-                <p>Crear cuentas de <strong>YouTube</strong> + <strong>Instagram</strong> y vincularlas a los perfiles personales del equipo para dar visibilidad inicial al proyecto.</p>
+            <h2>📱 Promoción</h2>
+            <h3 style="color:#495057;font-size:1em;margin-bottom:15px;">Estrategia de socialización temprana</h3>
+            <div class="item">
+                <input type="checkbox" class="item-checkbox">
+                <div class="item-content">
+                    <div class="item-title">Crear cuentas de YouTube + Instagram</div>
+                    <div class="item-desc">Vincular a los perfiles personales del equipo</div>
+                </div>
             </div>
-        </div>
-
-        <div class="section">
-            <h2>⚡ Prioritarios para Arrancar</h2>
+            <h3 style="color:#495057;font-size:1em;margin:20px 0 15px;">Prioritarios no finales para arrancar</h3>
             <div class="priorities">
                 <div class="priority-item">
                     <div class="priority-num">1</div>
-                    <div class="priority-text">Logotipo<br><span class="status status-pending">pendiente</span></div>
-                </div>
-                <div class="priority-item">
-                    <div class="priority-num">2</div>
                     <div class="priority-text">Crear un teaser<br><span class="status status-pending">pendiente</span></div>
                 </div>
                 <div class="priority-item">
-                    <div class="priority-num">3</div>
-                    <div class="priority-text">Landing page sponsors<br><span class="status status-pending">pendiente</span></div>
+                    <div class="priority-num">2</div>
+                    <div class="priority-text">Landing page (dossier sponsors)<br><span class="status status-pending">pendiente</span></div>
                 </div>
-            </div>
-            <div class="notes">
-                <p><strong>Nota:</strong> "Solo crearía un teaser y derivaría nuestros contactos a las cuentas oficiales (YouTube + Instagram) del proyecto. Una vez tengamos esto pondría focus en desarrollar el piloto, nada sofisticado, que quede profesional y con la esencia."</p>
             </div>
         </div>
 
         <div class="section">
-            <h2>🎯 Acciones Inmediatas</h2>
-            <div class="item">
-                <input type="checkbox" class="item-checkbox">
-                <div class="item-content">
-                    <div class="item-title">Comprar dominio mqdeporte.tv</div>
-                    <div class="item-desc">20€/año + email podcast@mqdeporte.tv</div>
-                </div>
-            </div>
-            <div class="item">
-                <input type="checkbox" class="item-checkbox">
-                <div class="item-content">
-                    <div class="item-title">Crear cuenta Google Workspace</div>
-                    <div class="item-desc">mqdeporte.tv@gmail.com</div>
-                </div>
-            </div>
-            <div class="item">
-                <input type="checkbox" class="item-checkbox">
-                <div class="item-content">
-                    <div class="item-title">Crear cuenta YouTube @mqdeporte.tv</div>
-                </div>
-            </div>
-            <div class="item">
-                <input type="checkbox" class="item-checkbox">
-                <div class="item-content">
-                    <div class="item-title">Crear cuenta Instagram @mqdeporte.tv</div>
-                </div>
-            </div>
-            <div class="item">
-                <input type="checkbox" class="item-checkbox">
-                <div class="item-content">
-                    <div class="item-title">Diseñar logotipo</div>
-                </div>
-            </div>
-            <div class="item">
-                <input type="checkbox" class="item-checkbox">
-                <div class="item-content">
-                    <div class="item-title">Producir teaser</div>
-                </div>
-            </div>
-            <div class="item">
-                <input type="checkbox" class="item-checkbox">
-                <div class="item-content">
-                    <div class="item-title">Publicar landing page para sponsors</div>
-                </div>
-            </div>
-            <div class="item">
-                <input type="checkbox" class="item-checkbox">
-                <div class="item-content">
-                    <div class="item-title">Desarrollar piloto (mínimo viable profesional)</div>
-                </div>
+            <h2>📋 Criterio a fecha 22/04/26</h2>
+            <div class="criterio">
+                <p>"Solo crearía un teaser para derivar nuestros contactos a las cuentas oficiales (YouTube + Instagram) del proyecto. Una vez tengamos esto, pondría focus en desarrollar el piloto, nada sofisticado solo que sea profesional y con la esencia."</p>
             </div>
         </div>
     </div>
