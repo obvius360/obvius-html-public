@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Brief - Mas Que Deporte</title>
+    <style>
+        :root {
+            --primary: #1a365d;
+            --accent: #c53030;
+            --light: #f7fafc;
+            --dark: #2d3748;
+            --border: #e2e8f0;
+            --yellow: #d69e2e;
+            --blue: #3182ce;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header .subtitle {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        
+        .meta-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 6px;
+        }
+        
+        .meta-item {
+            text-align: left;
+        }
+        
+        .meta-item label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            opacity: 0.8;
+            display: block;
+        }
+        
+        .meta-item span {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+        }
+        
+        .section {
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section h2 {
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 1.25rem;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        .section h3 {
+            color: var(--blue);
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.75rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid var(--yellow);
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .info-item {
+            background: var(--light);
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .info-item label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #718096;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+        
+        .info-item span {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        th {
+            background: var(--light);
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .priority-high {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .project-box {
+            background: var(--light);
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+        }
+        
+        .project-box.blue {
+            border-left: 4px solid var(--blue);
+        }
+        
+        .project-box.yellow {
+            border-left: 4px solid var(--yellow);
+        }
+        
+        .project-box h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+        
+        .kpi-card {
+            background: var(--light);
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+        
+        .kpi-card .value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .kpi-card .label {
+            font-size: 0.8rem;
+            color: #718096;
+        }
+        
+        .risks {
+            background: #fff5f5;
+            border: 1px solid var(--accent);
+            padding: 1rem;
+            border-radius: 6px;
+        }
+        
+        .risks h4 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+        
+        @media print {
+            body { padding: 0; background: white; }
+            .container { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Más que Deporte</h1>
+            <p class="subtitle">Brief Interno - Proyecto Audiovisual</p>
+            <span class="status-badge">En Desarrollo</span>
+            <div class="meta-info">
+                <div class="meta-item">
+                    <label>Autores</label>
+                    <span>Matías Burgos y Daniel Torres</span>
+                </div>
+                <div class="meta-item">
+                    <label>Dirigido a</label>
+                    <span>Taty Ferrer</span>
+                </div>
+                <div class="meta-item">
+                    <label>Asunto</label>
+                    <span>Consolidación estratégica, operativa y comercial</span>
+                </div>
+                <div class="meta-item">
+                    <label>Fecha</label>
+                    <span>29 de marzo de 2026</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="section">
+            <h2>1. Antecedentes y Contexto</h2>
+            <p>El 16 de marzo de 2026, Taty Ferrer compartió un avance del proyecto audiovisual "Más que Deporte & Entretenimiento", con lineamientos editoriales y lista preliminar de protagonistas. Este documento consolida la visión estratégica, el modelo de negocio, los roles y el plan operativo para su desarrollo conjunto por parte del equipo fundacional.</p>
+        </div>
+        
+        <div class="section">
+            <h2>2. Modelo de Negocio y Propuesta de Valor</h2>
+            <ul>
+                <li><strong>Negocio central:</strong> Generar valor a través de historias de superación vinculadas al deporte y monetizarlas mediante múltiples canales</li>
+                <li><strong>Producto estrella:</strong> Podcast audiovisual "Más que Deporte"</li>
+                <li><strong>Misión:</strong> Transmitir el poder transformador del deporte como herramienta de desarrollo personal, conexión humana y cambio social</li>
+            </ul>
+            <h3>Canales de monetización</h3>
+            <ul>
+                <li>Publicidad en plataformas de contenido</li>
+                <li>Patrocinios y colaboraciones con marcas</li>
+                <li>Eventos propios</li>
+                <li>Merchandising</li>
+                <li>Distribución a TV/radio</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>3. Público Objetivo</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <label>Target inicial</label>
+                    <span>Jóvenes de 16 a 35 años</span>
+                </div>
+                <div class="info-item">
+                    <label>Etiquetas temáticas</label>
+                    <span>Historias reales, superación, emociones, salud mental</span>
+                </div>
+            </div>
+            <h3>Objetivo emocional</h3>
+            <ul>
+                <li>Humanizar el deporte y visibilizar su impacto en la salud mental</li>
+                <li>Inspirar la práctica deportiva</li>
+                <li>Romper estereotipos</li>
+                <li>Crear entretenimiento con propósito que conecte marcas con valores positivos</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>4. Arquitectura de Marca</h2>
+            
+            <div class="project-box blue">
+                <h4>🟦 Proyecto 1: Marca Personal "Taty Ferrer"</h4>
+                <ul>
+                    <li><strong>Arquetipos:</strong> Heroína (disciplina, esfuerzo, superación) y Gobernanta (liderazgo, comunidad, estándares altos)</li>
+                    <li><strong>Mensaje clave:</strong> "Toma las riendas de tu vida y lidera con propósito"</li>
+                    <li><strong>Plataformas:</strong> LinkedIn, YouTube, Instagram, Landing Page</li>
+                    <li><strong>Objetivo corto/mediano:</strong> Crear comunidad con nombre propio</li>
+                    <li><strong>Objetivo largo:</strong> Consolidar autoridad y ecosistema ("Team Taty")</li>
+                </ul>
+            </div>
+            
+            <div class="project-box yellow">
+                <h4>🟨 Proyecto 2: Marca Comunitaria "Más que Deporte"</h4>
+                <ul>
+                    <li><strong>Formato:</strong> Conversatorios íntimos con personalidades del deporte</li>
+                    <li><strong>Productos:</strong> Podcast (video/audio), contenidos para redes, eventos, campañas, libros, merchandising</li>
+                    <li><strong>Canales (prioridad):</strong> YouTube | Spotify | Website | Instagram | TikTok | LinkedIn | Twitch | X</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>5. Equipo y Roles</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Integrante</th>
+                        <th>Responsabilidades</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Taty Ferrer</strong></td>
+                        <td>Conductora principal, productividad, gestión de patrocinios e interacción comunitaria. Aporta línea editorial y visión del proyecto.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Matías Burgos</strong></td>
+                        <td>Producción audiovisual, edición de video, gestión técnica y postproducción.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Daniel Torres</strong></td>
+                        <td>Gestión comercial, estrategia digital, redes sociales y expansión de marca.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 1rem;"><em>Los tres integrantes interactuarán en redes sociales siguiendo una estrategia definida para apuntalar el proyecto.</em></p>
+        </div>
+        
+        <div class="section">
+            <h2>6. Plan Operativo</h2>
+            <ul>
+                <li><strong>Fase 1 (Abril 2026):</strong> Definición de identidad visual, setup técnico, primeros 3 episodios piloto</li>
+                <li><strong>Fase 2 (Mayo 2026):</strong> Lanzamiento oficial, primeras entrevistas, activación de redes</li>
+                <li><strong>Fase 3 (Junio 2026):</strong> Búsqueda de patrocinadores, primer evento presencial</li>
+                <li><strong>Fase 4 (Q3 2026):</strong> Expansión de contenidos, merchandising, posibles colaboraciones con TV</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>7. KPI's y Métricas</h2>
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="value">10K</div>
+                    <div class="label">Subs YouTube (6 meses)</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="value">5K</div>
+                    <div class="label">Seguidores Instagram</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="value">3</div>
+                    <div class="label">Patrocinadores Q2</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="value">1K</div>
+                    <div class="label">Descargas/semana</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>8. Riesgos y Mitigaciones</h2>
+            <div class="risks">
+                <h4>⚠️ Riesgos identificados</h4>
+                <ul>
+                    <li><strong>Disponibilidad de protagonistas:</strong> Mitigación: Crear base de datos amplia de contactos</li>
+                    <li><strong>Producción técnica:</strong> Mitigación: Invertir en equipo y simplificar formato inicial</li>
+                    <li><strong>Monetización:</strong> Mitigación: Diversificar ingresos desde el inicio</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>9. Próximos Pasos</h2>
+            <ul>
+                <li>Validar brief con Taty Ferrer</li>
+                <li>Definir identidad visual y Branding</li>
+                <li>Setup de estudio y equipamiento técnico</li>
+                <li>Contactar primeros protagonistas</li>
+                <li>Desarrollar landing page</li>
+                <li>Plan de contenidos para redes sociales</li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p>Issue ID: OBV-3 | Actualizado: 29 marzo 2026</p>
+            <p>© 2026 Obvius 360</p>
+        </footer>
+    </div>
+</body>
+</html>
