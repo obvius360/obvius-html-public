@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Acciones Rápidas - Más Que Deporte</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 100%); min-height: 100vh; padding: 20px; color: #fff; }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 { text-align: center; color: #00d9ff; margin-bottom: 5px; font-size: 1.8em; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 30px; font-size: 0.9em; }
+        .section { background: rgba(255,255,255,0.03); border-radius: 12px; padding: 20px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.08); }
+        .section h2 { color: #00d9ff; border-bottom: 1px solid rgba(0,217,255,0.3); padding-bottom: 10px; margin-bottom: 15px; font-size: 1.2em; }
+        .item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .item:last-child { border-bottom: none; }
+        .item-checkbox { width: 22px; height: 22px; accent-color: #00d9ff; margin-top: 2px; }
+        .item-content { flex: 1; }
+        .item-title { font-weight: 600; margin-bottom: 4px; }
+        .item-desc { color: #999; font-size: 0.9em; }
+        .item-date { color: #ffc107; font-size: 0.85em; margin-top: 4px; }
+        .priority-badge { display: inline-block; background: rgba(255,193,7,0.15); color: #ffc107; padding: 3px 10px; border-radius: 12px; font-size: 0.75em; font-weight: 600; margin-left: 8px; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+        .info-card { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px; border-left: 3px solid #00d9ff; }
+        .info-card h3 { color: #00d9ff; font-size: 0.95em; margin-bottom: 8px; }
+        .info-card p { color: #ccc; font-size: 0.9em; word-break: break-all; }
+        .info-card a { color: #00d9ff; text-decoration: none; }
+        .info-card a:hover { text-decoration: underline; }
+        .social-strategy { background: linear-gradient(135deg, rgba(0,217,255,0.08), rgba(0,0,0,0.2)); padding: 15px; border-radius: 10px; border: 1px solid rgba(0,217,255,0.2); }
+        .priorities { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+        .priority-item { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px; text-align: center; }
+        .priority-num { font-size: 1.5em; color: #ffc107; font-weight: bold; }
+        .priority-text { font-size: 0.85em; color: #ccc; margin-top: 5px; }
+        .status { display: inline-block; padding: 4px 12px; border-radius: 12px; font-size: 0.75em; font-weight: 600; }
+        .status-pending { background: rgba(255,193,7,0.2); color: #ffc107; }
+        .status-done { background: rgba(76,175,80,0.2); color: #4caf50; }
+        .notes { background: rgba(233,30,99,0.1); padding: 15px; border-radius: 10px; border-left: 3px solid #e91e63; margin-top: 15px; }
+        .notes p { color: #ff80ab; font-size: 0.9em; font-style: italic; }
+        @media (max-width: 600px) { .priorities { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Plan de Acciones Rápidas</h1>
+        <p class="subtitle">Producción Podcast Más Que Deporte</p>
+
+        <div class="section">
+            <h2>📅 Fechas Clave</h2>
+            <div class="item">
+                <input type="checkbox" class="item-checkbox">
+                <div class="item-content">
+                    <div class="item-title">Sesión de fotos portafolio (Danny)<span class="status status-pending">pendiente</span></div>
+                    <div class="item-desc">Estilo portafolio en estudio</div>
+                </div>
+            </div>
+            <div class="item">
+                <input type="checkbox" class="item-checkbox">
+                <div class="item-content">
+                    <div class="item-title">Sesión de fotos Taty y Matías</div>
+                    <div class="item-date">Fechas: 4-7 mayo 2026</div>
+                </div>
+            </div>
+            <div class="item">
+                <input type="checkbox" class="item-checkbox">
+                <div class="item-content">
+                    <div class="item-title">Prueba técnica del podcast</div>
+                    <div class="item-date">Entre el 4-7 mayo 2026 o antes</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🌐 Infraestructura Digital</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Dominio Web</h3>
+                    <p><a href="https://mqdeporte.tv">mqdeporte.tv</a></p>
+                    <p style="color:#888;font-size:0.8em;margin-top:5px;">20€/año</p>
+                </div>
+                <div class="info-card">
+                    <h3>Email</h3>
+                    <p><a href="mailto:podcast@mqdeporte.tv">podcast@mqdeporte.tv</a></p>
+                </div>
+                <div class="info-card">
+                    <h3>Cuenta Google Workspace</h3>
+                    <p><a href="mailto:mqdeporte.tv@gmail.com">mqdeporte.tv@gmail.com</a></p>
+                </div>
+                <div class="info-card">
+                    <h3>RRSS</h3>
+                    <p>@mqdeporte.tv</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📱 Estrategia de Socialización</h2>
+            <div class="social-strategy">
+                <p>Crear cuentas de <strong>YouTube</strong> + <strong>Instagram</strong> y vincularlas a los perfiles personales del equipo para dar visibilidad inicial al proyecto.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>⚡ Prioritarios para Arrancar</h2>
+            <div class="priorities">
+                <div class="priority-item">
+                    <div class="priority-num">1</div>
+                    <div class="priority-text">Logotipo<br><span class="status status-pending">pendiente</span></div>
+                </div>
+                <div class="priority-item">
+                    <div class="priority-num">2</div>
+                    <div class="priority-text">Crear un teaser<br><span class="status status-pending">pendiente</span></div>
+                </div>
+                <div class="priority-item">
+                    <div class="priority-num">3</div>
+                    <div class="priority-text">Publicar landing page (dossier sponsors)<br><span class="status status-pending">pendiente</span></div>
+                </div>
+            </div>
+            <div class="notes">
+                <p>"Solo crearía un teaser y derivaría nuestros contactos a las cuentas oficiales (YouTube + Instagram) del proyecto. Una vez tengamos esto pondría focus en desarrollar el piloto, nada sofisticado, que quede profesional y con la esencia."</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Acciones Inmediatas</h2>
+            <div class="item">
+                <input type="checkbox" class="item-checkbox">
+                <div class="item-content">
+                    <div class="item-title">Comprar dominio mqdeporte.tv</div>
+                    <div class="item-desc">20€/año + email podcast@mqdeporte.tv</div>
+                </div>
+            </div>
+            <div class="item">
+                <input type="checkbox" class="item-checkbox">
+                <div class="item-content">
+                    <div class="item-title">Crear cuenta Google Workspace</div>
+                    <div class="item-desc">mqdeporte.tv@gmail.com</div>
+                </div>
+            </div>
+            <div class="item">
+                <input type="checkbox" class="item-checkbox">
+                <div class="item-content">
+                    <div class="item-title">Crear cuenta YouTube @mqdeporte.tv</div>
+                </div>
+            </div>
+            <div class="item">
+                <input type="checkbox" class="item-checkbox">
+                <div class="item-content">
+                    <div class="item-title">Crear cuenta Instagram @mqdeporte.tv</div>
+                </div>
+            </div>
+            <div class="item">
+                <input type="checkbox" class="item-checkbox">
+                <div class="item-content">
+                    <div class="item-title">Diseñar logotipo</div>
+                </div>
+            </div>
+            <div class="item">
+                <input type="checkbox" class="item-checkbox">
+                <div class="item-content">
+                    <div class="item-title">Producir teaser</div>
+                </div>
+            </div>
+            <div class="item">
+                <input type="checkbox" class="item-checkbox">
+                <div class="item-content">
+                    <div class="item-title">Publicar landing page para sponsors</div>
+                </div>
+            </div>
+            <div class="item">
+                <input type="checkbox" class="item-checkbox">
+                <div class="item-content">
+                    <div class="item-title">Desarrollar piloto (mínimo viable profesional)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
